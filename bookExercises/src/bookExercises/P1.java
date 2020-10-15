@@ -1,4 +1,4 @@
-package module1;
+package bookExercises;
 
 /*
 Write a program that prints a greeting of your choice,
