@@ -21,6 +21,8 @@ public class Lab1 {
 
 		System.out.print("Enter the score of the third test: ");
 		test3 = input.nextInt();
+		
+		input.close();
 
 		final int NUM_TESTS = 3;
 
