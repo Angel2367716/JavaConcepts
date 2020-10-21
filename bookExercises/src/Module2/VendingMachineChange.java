@@ -18,6 +18,7 @@ public class VendingMachineChange {
 		billDenomination = in.nextInt();
 		System.out.print("Enter item price in pennies-->");
 		itemPrice = in.nextInt();
+		in.close();
 
 		// Calculate the change due
 		changeDue = 100 * billDenomination - itemPrice;

@@ -1,4 +1,4 @@
-package bookExercises;
+package Module1;
 
 import javax.swing.JOptionPane;
 

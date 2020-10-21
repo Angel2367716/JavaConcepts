@@ -1,4 +1,4 @@
-package bookExercises;
+package Module1;
 
 //Write a program that prints an animal speaking a greeting.
 

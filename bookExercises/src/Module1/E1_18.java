@@ -1,4 +1,4 @@
-package bookExercises;
+package Module1;
 
 //Modify the program to show a different greeting  and image.
 

@@ -1,4 +1,4 @@
-package bookExercises;
+package Module1;
 
 //Show the message "Hello, name"
 
