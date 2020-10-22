@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Specification: This program takes two strings (firstname and lastname) and concatenates the strings tto make a full name
  * For: CSE 110 - Lab #2
  * Time Spent: 25 minutes
- */
+ ------------------------------------------------------------*/
 
 public class Lab2 {
 
