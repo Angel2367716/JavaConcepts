@@ -1,9 +1,10 @@
 /*------------------------------------------------------------
- * CSE 110			: 76232 (Session B)
- * Assignment		: 1
- * Author			: Marco Angel
- * Student ID		: 1202611535
- * Description		: This program takes determines how to split a number of pizzas (each with the same number of slices) among a group of adults and children at a pizza party.
+ * CSE 110              : 76232 (Session B)
+ * Assignment           : 1
+ * Author               : Marco Angel
+ * Student ID           : 1202611535
+ * Description          : This program determines how to split a number of pizzas (each with the same number of slices)
+ *                        among a group of adults and children at a pizza party.
  ------------------------------------------------------------*/
 
 import java.util.Scanner;
