@@ -23,6 +23,7 @@ public class PluralOfAnEnglishWord {
 		} else {
 			plural = word + "s";
 		}
+
 	}
 
 }
