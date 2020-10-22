@@ -20,6 +20,10 @@ public class ExtractingMiddle {
 		int position;
 		int length;
 
+		/*
+		 * We are using the reminder of division by 2 to find out wheter the value is
+		 * even or odd
+		 */
 		if (str.length() % 2 == 1) {
 			position = str.length() / 2;
 			length = 1;
@@ -27,6 +31,9 @@ public class ExtractingMiddle {
 			position = str.length() / 2 - 1;
 			length = 2;
 		}
+
+		// the second parameter of the substring method is the first position that we do
+		// not extract
 		String result = str.substring(position, position + length);
 
 		System.out.println("Middle of the string: " + result);
