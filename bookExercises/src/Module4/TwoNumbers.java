@@ -27,6 +27,7 @@ public class TwoNumbers {
 		// Only print this when the input is correct
 
 		System.out.println("You entered " + a + " and " + b);
+		in.close();
 	}
 
 }
