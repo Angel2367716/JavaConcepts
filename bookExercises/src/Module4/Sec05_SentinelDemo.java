@@ -21,6 +21,7 @@ public class Sec05_SentinelDemo {
 				count++;
 			}
 		}
+		in.close();
 
 		// Compute and print the average
 

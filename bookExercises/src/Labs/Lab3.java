@@ -77,7 +77,7 @@ public class Lab3 {
 		// -->
 		if (weigthed_total >= 50) {
 			// Print "the student PASSED the class."
-			System.out.println("the student PASSED the class");
+			System.out.println("the student PASSED the class with an overall score of: " + weigthed_total);
 		} else {
 			// Print "the student FAILED the class."
 			System.out.println("the student FAILED the class.");
