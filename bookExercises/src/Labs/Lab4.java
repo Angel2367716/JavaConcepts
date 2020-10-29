@@ -14,8 +14,8 @@ public class Lab4 {
 
 	public static void main(String[] args) {
 		int summation = 0, factorial = 1, leftmost = 1;
-		int choice = 0;
-//		int i = 0;
+		int choice;
+		boolean quit = false;
 		Scanner in = new Scanner(System.in);
 
 		do {
@@ -23,7 +23,6 @@ public class Lab4 {
 			displayMenu();
 
 			// Ask the user for one option
-			// System.out.print("Enter a number: ");
 			choice = in.nextInt();
 
 			switch (choice) {
@@ -67,13 +66,17 @@ public class Lab4 {
 				break;
 
 			case 4:
-				System.out.println("quit");
+				quit = true;
 				break;
+			default:
+				System.out.println("Please enter a number from the list" + "\n");
 
 			}
-		} while (choice > 0 && choice < 4);
+
+		} while (!quit);
 		System.out.println("Thank you for playing!");
 
+		in.close();
 	}
 
 	/**
