@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Lab4 {
 
 	public static void main(String[] args) {
-		int summation = 0, factorial = 1, leftmost = 0;
+		int summation = 0, factorial = 1, leftmost = 1;
 		int choice = 0;
 //		int i = 0;
 		Scanner in = new Scanner(System.in);
@@ -32,8 +32,8 @@ public class Lab4 {
 				System.out.println("Enter a number: ");
 				int sumInput = in.nextInt();
 
-				for (int j = 0; j <= sumInput; j++) {
-					summation = summation + j;
+				for (int i = 0; i <= sumInput; i++) {
+					summation = summation + i;
 				}
 				System.out.println("The sum of 1 to " + sumInput + " is " + summation + "\n");
 
@@ -43,8 +43,8 @@ public class Lab4 {
 				System.out.println("Enter a number: ");
 				int factNumber = in.nextInt();
 
-				for (int h = 1; h <= factNumber; h++) {
-					factorial = factorial * h;
+				for (int i = 1; i <= factNumber; i++) {
+					factorial = factorial * i;
 				}
 				System.out.println("The factorial of " + factNumber + " is " + factorial + "\n");
 
@@ -52,9 +52,17 @@ public class Lab4 {
 
 			case 3:
 				System.out.println("Enter a number: ");
-				int leftNum = in.nextInt();
+				int enteredNum = in.nextInt();
+				int num = enteredNum;
 
-				System.out.println("The leftmost digit of  " + leftNum + " is " + factorial + "\n");
+				// getting the first digit of an integer
+				while (num > 9) {
+					num = num / 10;
+					leftmost = num;
+
+				}
+
+				System.out.println("The leftmost digit of  " + enteredNum + " is " + leftmost + "\n");
 
 				break;
 
@@ -63,7 +71,7 @@ public class Lab4 {
 				break;
 
 			}
-		} while (choice < 0 && choice > 4);
+		} while (choice > 0 && choice < 4);
 		System.out.println("Thank you for playing!");
 
 	}
