@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Lab4 {
 
 	public static void main(String[] args) {
-		int summation = 0, factorial = 1, leftmost = 1;
+		int /* summation = 0, */ factorial = 1, leftmost = 1;
 		int choice;
 		boolean quit = false;
 		Scanner in = new Scanner(System.in);
@@ -30,11 +30,12 @@ public class Lab4 {
 			case 1:
 				System.out.println("Enter a number: ");
 				int sumInput = in.nextInt();
+				findSummation(sumInput);
 
-				for (int i = 0; i <= sumInput; i++) {
-					summation = summation + i;
-				}
-				System.out.println("The sum of 1 to " + sumInput + " is " + summation + "\n");
+//				for (int i = 0; i <= sumInput; i++) {
+//					summation = summation + i;
+//				}
+//				System.out.println("The sum of 1 to " + sumInput + " is " + summation + "\n");
 
 				break;
 
@@ -77,6 +78,15 @@ public class Lab4 {
 		System.out.println("Thank you for playing!");
 
 		in.close();
+	}
+
+	private static int findSummation(int sumInput) {
+		int summation = 0;
+		for (int i = 0; i <= sumInput; i++) {
+			summation = summation + i;
+		}
+		System.out.println("The sum of 1 to " + sumInput + " is " + summation + "\n");
+		return summation;
 	}
 
 	/**
