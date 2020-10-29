@@ -13,24 +13,60 @@ import java.util.Scanner;
 public class Lab4 {
 
 	public static void main(String[] args) {
-		// Declare some variables you need
-        double summation= 0, factorial=0;
-        int leftmostDigit;
+		int summation = 0, factorial = 1, leftmost = 0;
+		int choice = 0;
+//		int i = 0;
+		Scanner in = new Scanner(System.in);
 
-        do {
-            // Display the menu
-            displayMenu();
+		do {
+			// Display the menu
+			displayMenu();
 
-            // Ask the user for one option
-            // -->
+			// Ask the user for one option
+			// System.out.print("Enter a number: ");
+			choice = in.nextInt();
 
-            switch (?????) {
-                // Define four cases for different options. Don't forget "break".
-                // -->
-            }
-        } while (?????);
+			switch (choice) {
+			// Define four cases for different options. Don't forget "break".
+			case 1:
+				System.out.println("Enter a number: ");
+				int sumInput = in.nextInt();
 
-    }
+				for (int j = 0; j <= sumInput; j++) {
+					summation = summation + j;
+				}
+				System.out.println("The sum of 1 to " + sumInput + " is " + summation + "\n");
+
+				break;
+
+			case 2:
+				System.out.println("Enter a number: ");
+				int factNumber = in.nextInt();
+
+				for (int h = 1; h <= factNumber; h++) {
+					factorial = factorial * h;
+				}
+				System.out.println("The factorial of " + factNumber + " is " + factorial + "\n");
+
+				break;
+
+			case 3:
+				System.out.println("Enter a number: ");
+				int leftNum = in.nextInt();
+
+				System.out.println("The leftmost digit of  " + leftNum + " is " + factorial + "\n");
+
+				break;
+
+			case 4:
+				System.out.println("quit");
+				break;
+
+			}
+		} while (choice < 0 && choice > 4);
+		System.out.println("Thank you for playing!");
+
+	}
 
 	/**
 	 * Print the menu
