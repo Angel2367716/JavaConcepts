@@ -1,10 +1,10 @@
 package Labs;
 /*-------------------------------------------------------------
-//AUTHOR: your name.
-//FILENAME: title of the source file.
-//SPECIFICATION: your own description of the program.
+//AUTHOR: Marco Angel
+//FILENAME: Lab4
+//SPECIFICATION: This program performs three different arithmetic operations based on user's input
 //FOR: CSE 110- Lab #4
-//TIME SPENT: how long it took you to complete the assignment.
+//TIME SPENT: 4 hours
 //-----------------------------------------------------------*/
 
 //Import Scanner class
@@ -13,7 +13,6 @@ import java.util.Scanner;
 public class Lab4 {
 
 	public static void main(String[] args) {
-		int /* summation = 0, factorial = 1, */ leftmost = 1;
 		int choice;
 		boolean quit = false;
 		Scanner in = new Scanner(System.in);
@@ -37,27 +36,12 @@ public class Lab4 {
 				System.out.println("Enter a number: ");
 				int factNumber = in.nextInt();
 				findFactorial(factNumber);
-//				for (int i = 1; i <= factNumber; i++) {
-//					factorial = factorial * i;
-//				}
-//				System.out.println("The factorial of " + factNumber + " is " + factorial + "\n");
-
 				break;
 
 			case 3:
 				System.out.println("Enter a number: ");
 				int enteredNum = in.nextInt();
-				int num = enteredNum;
-
-				// getting the first digit of an integer
-				while (num > 9) {
-					num = num / 10;
-					leftmost = num;
-
-				}
-
-				System.out.println("The leftmost digit of  " + enteredNum + " is " + leftmost + "\n");
-
+				findLeftMost(enteredNum);
 				break;
 
 			case 4:
@@ -106,6 +90,24 @@ public class Lab4 {
 		}
 		System.out.println("The factorial of " + factNumber + " is " + factorial + "\n");
 		return factorial;
+	}
+
+	/**
+	 * Evaluates the leftmost digit from an inputted integer
+	 *
+	 * @param enteredNum
+	 * @return leftmost digit of an integer
+	 */
+	private static int findLeftMost(int enteredNum) {
+		int leftmost = 1;
+		int num = enteredNum;
+		while (num > 9) {
+			num = num / 10;
+			leftmost = num;
+
+		}
+		System.out.println("The leftmost digit of " + enteredNum + " is " + leftmost + "\n");
+		return leftmost;
 	}
 
 	/**
