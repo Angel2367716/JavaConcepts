@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Lab4 {
 
 	public static void main(String[] args) {
-		int /* summation = 0, */ factorial = 1, leftmost = 1;
+		int /* summation = 0, factorial = 1, */ leftmost = 1;
 		int choice;
 		boolean quit = false;
 		Scanner in = new Scanner(System.in);
@@ -31,22 +31,16 @@ public class Lab4 {
 				System.out.println("Enter a number: ");
 				int sumInput = in.nextInt();
 				findSummation(sumInput);
-
-//				for (int i = 0; i <= sumInput; i++) {
-//					summation = summation + i;
-//				}
-//				System.out.println("The sum of 1 to " + sumInput + " is " + summation + "\n");
-
 				break;
 
 			case 2:
 				System.out.println("Enter a number: ");
 				int factNumber = in.nextInt();
-
-				for (int i = 1; i <= factNumber; i++) {
-					factorial = factorial * i;
-				}
-				System.out.println("The factorial of " + factNumber + " is " + factorial + "\n");
+				findFactorial(factNumber);
+//				for (int i = 1; i <= factNumber; i++) {
+//					factorial = factorial * i;
+//				}
+//				System.out.println("The factorial of " + factNumber + " is " + factorial + "\n");
 
 				break;
 
@@ -80,6 +74,15 @@ public class Lab4 {
 		in.close();
 	}
 
+	// Methods -----------------------------------------------------------*/
+
+	/**
+	 * Evaluates the summation of a number entered
+	 *
+	 * @param sumInput
+	 * @return summation of user input
+	 */
+
 	private static int findSummation(int sumInput) {
 		int summation = 0;
 		for (int i = 0; i <= sumInput; i++) {
@@ -87,6 +90,22 @@ public class Lab4 {
 		}
 		System.out.println("The sum of 1 to " + sumInput + " is " + summation + "\n");
 		return summation;
+	}
+
+	/**
+	 * Evaluates the factorial of a number entered
+	 *
+	 * @param factNumber
+	 * @return factorial number
+	 */
+
+	private static int findFactorial(int factNumber) {
+		int factorial = 1;
+		for (int i = 1; i <= factNumber; i++) {
+			factorial = factorial * i;
+		}
+		System.out.println("The factorial of " + factNumber + " is " + factorial + "\n");
+		return factorial;
 	}
 
 	/**
