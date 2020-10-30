@@ -34,12 +34,13 @@ public class Assignment02 {
 		in.close();
 
 		// compute required values
-		int truckloads_of_Asphalt, stoplights, conduit_Pipes, crew_members;
+		int truckloads_of_Asphalt, stop_lights, conduit_Pipes, crew_members, total_intersections;
 		double cost_of_Asphalt, cost_of_Stoplights, cost_of_Conduit_Pipes, cost_of_Labor, total_Cost,
 				total_weight_of_asphalt;
 		double inchToFt = 1 / 12.0;
 		double lbsPerCubitFt = 12 * 150;
 		final double COST_OF_FIVE_TON = 200 * 5;
+		final double COST_OF_SINGLE_STOPLIGHT = 25000;
 
 		// Truckloads of Asphalt and Asphalt cost
 		total_weight_of_asphalt = roadLength * ONE_MILE_IN_FT * numOfLanes * asphaltDepth * inchToFt * lbsPerCubitFt;
@@ -50,17 +51,26 @@ public class Assignment02 {
 		conduit_Pipes = (int) Math.round(roadLength * ONE_MILE_IN_FT / 24); // conduit pipe available in 24 ft
 		cost_of_Conduit_Pipes = conduit_Pipes * 500; // 500 is the cost of one 24 ft conduit pipe
 
+		// Intersactions and cost
+		total_intersections = (int) Math.floor(roadLength);
+		stop_lights = total_intersections * (2 + numOfLanes);
+		cost_of_Stoplights = stop_lights * COST_OF_SINGLE_STOPLIGHT;
+
+		// Crew members and cost
+		crew_members = (int) Math.round(50 * roadLength * numOfLanes / daysToComplete);
+		cost_of_Labor = 25 * 8 * daysToComplete * crew_members;
+
 		// display results
 		System.out.println("\n" + "=== Amount of materials needed ===");
 		System.out.println("Truckloads of Asphalt : " + truckloads_of_Asphalt);
-		System.out.println("Stoplights :");
+		System.out.println("Stoplights : " + stop_lights);
 		System.out.println("Conduit pipes : " + conduit_Pipes);
-		System.out.println("Crew members needed :");
+		System.out.println("Crew members needed : " + crew_members);
 		System.out.println("\n" + "=== Cost of Materials ============");
 		System.out.println("Cost of Asphalt : " + cost_of_Asphalt);
-		System.out.println("Cost of Stoplights : ");
+		System.out.println("Cost of Stoplights : " + cost_of_Stoplights);
 		System.out.println("Cost of Conduit pipes : " + cost_of_Conduit_Pipes);
-		System.out.println("Cost of Labor :");
+		System.out.println("Cost of Labor : " + cost_of_Labor);
 		System.out.println("\n" + "=== Total Cost of Project ========");
 		System.out.println("Total cost of project :");
 
