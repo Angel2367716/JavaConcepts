@@ -18,6 +18,13 @@ public class Assignment02 {
 		double roadLength;
 		int numOfLanes, asphaltDepth, daysToComplete;
 		final int ONE_MILE_IN_FT = 5280;
+		int truckloads_of_Asphalt, stop_lights, conduit_Pipes, crew_members, total_intersections;
+		double cost_of_Asphalt, cost_of_Stoplights, cost_of_Conduit_Pipes, cost_of_Labor, total_Cost,
+				total_weight_of_asphalt;
+		double inchToFt = 1 / 12.0;
+		double lbsPerCubitFt = 12 * 150;
+		final double COST_OF_FIVE_TON = 200 * 5;
+		final double COST_OF_SINGLE_STOPLIGHT = 25000;
 
 		// collect inputs
 		System.out.print("Length of road project (miles): ");
@@ -34,14 +41,6 @@ public class Assignment02 {
 		in.close();
 
 		// compute required values
-		int truckloads_of_Asphalt, stop_lights, conduit_Pipes, crew_members, total_intersections;
-		double cost_of_Asphalt, cost_of_Stoplights, cost_of_Conduit_Pipes, cost_of_Labor, total_Cost,
-				total_weight_of_asphalt;
-		double inchToFt = 1 / 12.0;
-		double lbsPerCubitFt = 12 * 150;
-		final double COST_OF_FIVE_TON = 200 * 5;
-		final double COST_OF_SINGLE_STOPLIGHT = 25000;
-
 		// Truckloads of Asphalt and Asphalt cost
 		total_weight_of_asphalt = roadLength * ONE_MILE_IN_FT * numOfLanes * asphaltDepth * inchToFt * lbsPerCubitFt;
 		truckloads_of_Asphalt = (int) Math.ceil(total_weight_of_asphalt / 10000);
@@ -58,7 +57,10 @@ public class Assignment02 {
 
 		// Crew members and cost
 		crew_members = (int) Math.round(50 * roadLength * numOfLanes / daysToComplete);
-		cost_of_Labor = 25 * 8 * daysToComplete * crew_members;
+		cost_of_Labor = 25 * 8 * daysToComplete * crew_members; // crew member formula given
+
+		// Total cost
+		total_Cost = cost_of_Asphalt + cost_of_Stoplights + cost_of_Conduit_Pipes + cost_of_Labor;
 
 		// display results
 		System.out.println("\n" + "=== Amount of materials needed ===");
@@ -72,7 +74,7 @@ public class Assignment02 {
 		System.out.println("Cost of Conduit pipes : " + cost_of_Conduit_Pipes);
 		System.out.println("Cost of Labor : " + cost_of_Labor);
 		System.out.println("\n" + "=== Total Cost of Project ========");
-		System.out.println("Total cost of project :");
+		System.out.println("Total cost of project : " + total_Cost);
 
 	}
 
