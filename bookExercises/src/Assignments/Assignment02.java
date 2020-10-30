@@ -1,10 +1,9 @@
 package Assignments;
-//CSE 110     : 76232 (Session B)
-
-//Assignment  : 2
-//Author      : Marco Angel
-//Student ID  : 1202611535
-//Description : The program determines the material needs and costs for building a new highway based on user input
+/*CSE 110     : 76232 (Session B)
+Assignment  : 2
+Author      : Marco Angel
+Student ID  : 1202611535
+Description : The program determines the material needs and costs for building a new highway based on user input*/
 
 import java.util.Scanner;
 
