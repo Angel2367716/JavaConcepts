@@ -4,7 +4,7 @@ package Assignments;
 //Assignment  : 2
 //Author      : Marco Angel
 //Student ID  : 1202611535
-//Description : <of the file contents>
+//Description : The program determines the material needs and costs for building a new highway based on user input
 
 import java.util.Scanner;
 
@@ -62,17 +62,21 @@ public class Assignment02 {
 		// Total cost
 		total_Cost = cost_of_Asphalt + cost_of_Stoplights + cost_of_Conduit_Pipes + cost_of_Labor;
 
-		// display results
+		// materials needed
 		System.out.println("\n" + "=== Amount of materials needed ===");
 		System.out.println("Truckloads of Asphalt : " + truckloads_of_Asphalt);
 		System.out.println("Stoplights : " + stop_lights);
 		System.out.println("Conduit pipes : " + conduit_Pipes);
 		System.out.println("Crew members needed : " + crew_members);
+
+		// cost of materials
 		System.out.println("\n" + "=== Cost of Materials ============");
 		System.out.println("Cost of Asphalt : " + cost_of_Asphalt);
 		System.out.println("Cost of Stoplights : " + cost_of_Stoplights);
 		System.out.println("Cost of Conduit pipes : " + cost_of_Conduit_Pipes);
 		System.out.println("Cost of Labor : " + cost_of_Labor);
+
+		// total cost of project
 		System.out.println("\n" + "=== Total Cost of Project ========");
 		System.out.println("Total cost of project : " + total_Cost);
 
